@@ -9,4 +9,4 @@ class Command(BaseCommand):
     help = 'Starts the Admin user.'
 
     def handle(self, *args, **options):
-        User.objects.create_superuser(username='admin', password='password')
+        User.objects.create_superuser(username='admin', email='admin@djcodingtest.com', password='password')
