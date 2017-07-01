@@ -7,7 +7,10 @@ pip install -U pip \
 
 cd app/
 
+python manage.py test
+
 python manage.py migrate \
-    && python manage.py createadminuser
+    && python manage.py createadminuser \
+    && python manage.py loaddata employees/fixtures/employees.json
 
 python manage.py runserver 0.0.0.0:8000

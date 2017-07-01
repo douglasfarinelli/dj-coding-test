@@ -25,10 +25,15 @@ RUN pip3 install -U pip \
 
 WORKDIR /src/app
 
+#:  RUN TESTS
+
+RUN python3 manage.py test
+
 #:  MIGRATIONS
 
 RUN python3 manage.py migrate \
-        && python3 manage.py createadminuser
+        && python3 manage.py createadminuser \
+        && python3 manage.py loaddata employees/fixtures/employees.json
 
 EXPOSE 8000
 
