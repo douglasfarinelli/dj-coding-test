@@ -25,3 +25,10 @@ Or with virtualenv:
 # Request
 
 curl -H "Content-Type: application/javascript" http://localhost:8000/api/v1/employees/
+
+# Django Admin Painel
+
+http://localhost:8000
+
+User: admin
+Password: password
